@@ -28,10 +28,9 @@ public class Remove_Duplicates_Numbers_From_Array {
                   */
 
     public static void main(String[] args) {
-        int [] dupArr={2};
+        int [] dupArr={1,2,-6,4,6,-6,0,3,99,-1,0};
         System.out.println(Arrays.toString(remove_Duplicates_Numbers_From_Array (dupArr)));
     }
-
     public static int [] remove_Duplicates_Numbers_From_Array (int [] dupArr){
         if(dupArr==null){ return null;}
         int index=0;
