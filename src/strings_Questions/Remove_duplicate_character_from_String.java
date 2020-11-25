@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Remove_duplicate_character_from_String {
         /*
-       Java program to remove duplicates characters :
+       Java program to remove duplicates characters from a given string:
        Write a method to remove all duplicates characters in a given string.
        Note: Avoid using the in-built method.
        Note: using the in-built method.
@@ -21,10 +21,11 @@ public class Remove_duplicate_character_from_String {
        Expected Result : null
      */
         public static void main(String[] args) {
-            String str="";
+            String str="Replace all spaces";
             System.out.println(remove_Duplicates_Character(str));
             System.out.println(remove_Duplicates_Character_from_String(str));
             System.out.println(remove_Duplicates_Character_Using_LinkedHashSet(str));
+//            System.out.println(remove_Duplicates_Using_Recursion(str,str));
 
         }
     //     Method N:01
@@ -78,4 +79,17 @@ public class Remove_duplicate_character_from_String {
         }
         return nonDuplicStr;
     }
+//    public static String remove_Duplicates_Using_Recursion(String inputting,String DupRemoved){
+//
+//            if(inputting.length()==0){
+//            }
+//
+//            int i,j;
+//          for (i=0 ,j=inputting.length()-1;i<inputting.length();i++,j--) {
+//              if(inputting.charAt(i)!=inputting.charAt(j) && i!=j){
+//                  DupRemoved= DupRemoved+inputting.charAt(i);
+//              }
+//          }
+//          return DupRemoved;
+//    }
 }

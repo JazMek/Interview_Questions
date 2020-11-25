@@ -46,7 +46,6 @@ public class Factorial_Number {
                    int factor=1;
                    if(x>0){
                           factor=x*factorial_Using_Recursion(x-1);
-
                    }
                  return factor;
              }

@@ -21,10 +21,16 @@ import java.util.*;
 
     public static void main(String[] args) {
         int [] array={-1,-3,5,77,0,1,2,3,4,5,6,7,8,9,99};
-        System.out.println(Arrays.toString(array_Reverse(array)));
-        System.out.println(Arrays.toString(reverse_an_array(array)));
-        System.out.println(Arrays.toString(Reverse_Given_Array(array)));
-        reverse_an_Array(array);
+//        System.out.println(Arrays.toString(array_Reverse(array)));
+//        System.out.println(Arrays.toString(reverse_an_array(array)));
+//        System.out.println(Arrays.toString(Reverse_Given_Array(array)));
+//        reverse_an_Array(array);
+//        System.out.println(Arrays.toString(reverse_Array(array)));
+//        System.out.println(Arrays.toString(Reverse_Array(array)));
+        System.out.println("*************************************************");
+//        System.out.println(Arrays.toString(Array_Reverse(array)));
+        System.out.println(Arrays.toString(ArrayReverse(array, array.length)));
+
     }
     public static int[] array_Reverse(int []array){
         int i,j;
@@ -37,6 +43,34 @@ import java.util.*;
             }
         return arrayReverse;
           }
+        public static int[] Array_Reverse(int []array){
+            int i,j,tump;
+            for(i=0,j=array.length-1;i<= array.length/2;i++,j--){
+                tump=array[i];
+                array[i]=array[j];
+                array[j]=tump;
+            }
+            return array;
+        }
+        public static int[] ArrayReverse(int []array,int j){
+            int i,tump;
+            for(i=0;i< j/2;i++){
+                tump=array[i];
+                array[i]=array[j-i-1];
+                array[j-i-1]=tump;
+            }
+            return array;
+        }
+        //Method N01:
+        public static int[] reverse_Array(int [] InpArray){
+            if(InpArray==null){ return null;}
+            int i,j;
+            int [] ReverArray =new int [InpArray.length];
+            for(i=0 ,j=InpArray.length-1 ;i<InpArray.length; i++ ,j--){
+                ReverArray[i]=InpArray[j];
+            }
+            return ReverArray;
+        }
     public static int [] reverse_an_array(int []array){
         int num;
         int j=array.length-1;
@@ -70,4 +104,12 @@ import java.util.*;
     public static void reverse_an_Array(int []array){
         Collections.reverse(Arrays.asList(array));
     }
+        //Method N02:
+        //I have to work on this method
+        public static Object[] Reverse_Array(int [] InpArray){
+            List InpList =Arrays.asList(InpArray);
+            Object [] ReverInp= InpList.subList(InpArray.length-1,0).toArray();
+
+        return ReverInp;
+        }
 }

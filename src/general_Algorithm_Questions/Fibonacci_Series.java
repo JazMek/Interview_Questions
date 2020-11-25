@@ -39,8 +39,6 @@ public class Fibonacci_Series {
                    System.out.println(Fibonacci_Using_Recursion(n));
 
         }
-
-
               //    Fibonacci Series Using Iteration
               public static int Fibonacci_Using_Iteration(int n){
                    int Fib=0;
@@ -60,27 +58,14 @@ public class Fibonacci_Series {
                  int Fib=1;
                  if(n==0){return 0;}
                  else{
-             int i=n;
-             while (i>1){
-                   Fib= Fib + Fibonacci_Using_Recursion(n-i) ;
-//                 5
-//                 0=n-i     Fib= Fib + Fibonacci_Using_Recursion(n-i);
-//                 1=n-i     Fib= Fib + Fibonacci_Using_Recursion(1) ;
-//                 i=n-2     Fib= Fib + Fibonacci_Using_Recursion(2) ;
-//                 i=n-3     Fib= Fib + Fibonacci_Using_Recursion(3) ;
-//                 i=n-4     Fib= Fib + Fibonacci_Using_Recursion(4) ;
-//                 i=n-5     Fib= Fib + Fibonacci_Using_Recursion(5) ;
-//                 i=n-6     Fib= Fib + Fibonacci_Using_Recursion(6) ;
-//
-
-//             Fib =1 +1
-//                 0 ,1 , 1 , 2 ,  3  ,   5,8
-//             n   0, 1 , 2 , 3 ,  4  ,   5,6
-                 i--;
-             }
-                 }
+                     int i=n;
+                        while (i>1){
+                             Fib= Fib + Fibonacci_Using_Recursion(n-i) ;
+                          i--;
+                         }
+                     }
              return Fib;
-    }
+          }
 
 
 

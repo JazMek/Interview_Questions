@@ -3,6 +3,7 @@ package general_Algorithm_Questions;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Prime_Numbers {
        /*
@@ -12,11 +13,27 @@ public class Prime_Numbers {
       */
 
     public static void main(String[] args) {
-        int n = 40;
+        int n = 13;
 
         System.out.println(prime_Numbers_ArrayList(n));
 //        System.out.println(Arrays.toString(prime_Numbers_Array(n)));
     }
+    public static void prime_Numbers() {
+    Scanner sc =new Scanner(System.in);
+        System.out.println("Entre the Number : ");
+    int num=sc.nextInt();
+       for(int j=num;j>1;j--){  //  num = 13 , i=12 ,j=13
+        boolean isPrime=true;
+        int i=j-1;
+        while(i>1){
+            if(j%i ==0){isPrime=false;}
+            i--;
+        }
+        if(isPrime){
+            System.out.println(" The prime number is : "+j);
+        }
+    }
+}
 
     public static ArrayList prime_Numbers_ArrayList(int n) {
         ArrayList prime_Num = new ArrayList<>();

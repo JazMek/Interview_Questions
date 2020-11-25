@@ -36,6 +36,7 @@ public class Swiping_Tow_Integers {
 //Using arithmetic  operator
 
     //        Using multiplication and division
+
     public static void swipe_Tow_Integers_Using_Multiplication_And_Division(int x,int y){
 //      x=5,y=7
         x=x*y;
